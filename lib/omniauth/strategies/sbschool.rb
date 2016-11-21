@@ -5,12 +5,6 @@ module Omniauth
 		module Sbschool < OmniAuth::Strategies::OAuth2
       option :name, 'sbschool'
 
-      option :client_options, {
-        :site => 'https://api.sberbank-school.ru/'
-        :authorization_url => 'https://api.sberbank-school.ru/oauth/authorize/'
-        :token_url => 'https://api.sberbank-school.ru/oauth/access_token/'
-      }
-
       uid { raw_info['client_id'] }
 
       extra do
